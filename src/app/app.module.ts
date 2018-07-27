@@ -13,7 +13,6 @@ import { TestimonialsComponent } from './pages/testimonials/testimonials.compone
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { SubjectsOfferedComponent } from './pages/subjects-offered/subjects-offered.component';
-import { ImageCarouselComponent } from './features/image-carousel/image-carousel.component';
 
 
 @NgModule({
@@ -21,7 +20,7 @@ import { ImageCarouselComponent } from './features/image-carousel/image-carousel
     AppComponent,
     MainMenuComponent,
     TopRibbonComponent,
-    MidRibbonComponent,
+    MidRibbonComponent, 
     FooterComponent,
     HomeComponent,
     FaqsComponent,
@@ -30,7 +29,6 @@ import { ImageCarouselComponent } from './features/image-carousel/image-carousel
     AboutUsComponent,
     ContactUsComponent,
     SubjectsOfferedComponent,
-    ImageCarouselComponent,
   ],
   imports: [
     BrowserModule,
