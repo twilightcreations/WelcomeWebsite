@@ -1,0 +1,37 @@
+
+//enabling the content to still sit within the page canvas but not visible.
+@mixin hideFromPage() {
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    height:0;
+    width:0;
+}
+
+
+$font-Headers:        Helvetica, sans-serif;
+$font-content:        Helvetica, sans-serif;
+
+$primary-color:         #3d3d3d;
+$secondary-color:       #f89b1c;
+$tertiary-color:        #432016; 
+
+$site-wide-text:        #333;
+$site-wide-headers:     #333; 
+
+$desktop-menu-background-color:     $primary-color;
+$desktop-menu-text-color:           #fff;
+$desktop-menu-text-hover-color:     $primary-color;
+
+$footer-background-color:           $primary-color;
+
+$main-image-border-color:       $secondary-color;
+$main-image-border-thickness:   1px;
+$main-image-padding:            5px; 
+
+$header-color:  #AD6D13;
+$link-color:  #AD6D13;
+$link-hover-color:  $tertiary-color;
+
+

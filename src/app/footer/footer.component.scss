@@ -1,0 +1,100 @@
+@import "../styles-global/_variables.scss";
+
+.inner-footer-wrapper {
+    background-color: $footer-background-color;
+    border: 1px solid #ccc;
+    padding-top:20px;
+    padding-bottom:20px;
+    h3 {
+        color:#ccc;
+        font-weight:normal;
+        border-bottom:1px solid #ccc;
+        padding: 10px 10px 10px 10px;
+        margin:0 10px 10px 10px;
+    }    
+
+//blocks of text on the footer
+    .text-blocks-footer {
+        margin-bottom:20px;
+
+        .text-block {
+            text-align: center; 
+            padding-bottom:0px;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul.footer-address-list {
+        padding:0 10px 10px 10px; 
+        list-style: none;
+        margin-bottom:20px;
+        color:$secondary-color;  
+    
+        li{
+            padding:0 5px 5px 5px;
+            text-align: center;
+            line-height: 2em; 
+            font-size: 16px;
+        }
+    }
+    
+    ul.footer-list-floating-points {
+        padding:0 20px 20px 20px;
+        li{
+            padding:6px;
+            display: inline-block;
+            margin:3px;
+            border:1px solid  #666;
+            color: $secondary-color;
+        }
+    }
+    
+    
+    //footer site navigation
+    .site-nav ul {
+        padding:0 20px 20px 20px;
+            -webkit-column-count: 2; /* Chrome, Safari, Opera */
+            -moz-column-count: 2; /* Firefox */
+            column-count: 2;
+    
+        li
+        {
+            a{
+                padding: 8px;
+                display: block;
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
+        li.toggle-close{
+            display:none;
+        }
+    }
+
+
+}
+@media screen and (min-width: 700px) { 
+    .inner-footer-wrapper  {
+        .text-blocks-footer {
+            display: flex;
+            width:calc(100% + 20px);
+            margin-left:-20px;
+            .text-block {
+                flex:1;
+                margin-left:20px;
+            }             
+        }
+    }
+
+
+
+
+}
+
+//END --- blocks of text on the footer
+
+
+

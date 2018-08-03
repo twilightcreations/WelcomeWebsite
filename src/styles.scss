@@ -3,3 +3,101 @@ html,
 body {
     height: 100%;
 }
+
+
+
+//enabling the content to still sit within the page canvas but not visible.
+//needs refactoring
+@mixin hideFromPage() {
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    height:0;
+    width:0;
+}
+
+
+$font-Headers:        Helvetica, sans-serif;
+$font-content:        Helvetica, sans-serif;
+
+$primary-color:         #3d3d3d;
+$secondary-color:       #f89b1c;
+$tertiary-color:        #432016; 
+
+$site-wide-text:        #333;
+$site-wide-headers:     #333; 
+
+$desktop-menu-background-color:     $primary-color;
+$desktop-menu-text-color:           #fff;
+$desktop-menu-text-hover-color:     $primary-color;
+
+$footer-background-color:           $primary-color;
+
+$main-image-border-color:       $secondary-color;
+$main-image-border-thickness:   1px;
+$main-image-padding:            5px; 
+
+$header-color:  #AD6D13;
+$link-color:  #AD6D13;
+$link-hover-color:  $tertiary-color;
+
+//END - enabling the content to still sit within the page canvas but not visible.
+//END - needs refactoring
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+ }
+ 
+ p {
+     line-height:1.5em;
+     margin-bottom:20px;
+     text-align: justified;
+ }
+ 
+ h1, h2, h3, h4, h5, h5 {
+     font-family: 'Roboto', sans-serif;
+     margin-bottom:26px;
+     text-align: center; 
+     color: $header-color;
+     font-weight:300;
+     
+ }
+  
+ h1 {
+     font-size:2.4rem;
+     border-bottom: 1px dashed $header-color;
+     max-width:700px;
+     margin-left: auto;
+     margin-right: auto;
+     padding-bottom:15px;
+     margin-top:15px; 
+ }
+ h2 {
+     font-size:2.0em;    
+ }
+ h3 {
+     font-size:1.8em;    
+ }
+ h4 {
+     font-size:1.6em;    
+ }
+ h5 {
+     font-size:1.5em;    
+ }
+ h6 {
+     font-size:1.5em;    
+ } 
+ 
+ a {
+     color: $link-color;
+     text-decoration: none;
+     &:hover {
+         color: $link-hover-color;
+         text-decoration: underline;
+     }
+ }
+
+//  END - typography

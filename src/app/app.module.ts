@@ -13,6 +13,7 @@ import { TestimonialsComponent } from './pages/testimonials/testimonials.compone
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { SubjectsOfferedComponent } from './pages/subjects-offered/subjects-offered.component';
+import { HomeFeatureComponent } from './features/home-feature/home-feature.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { SubjectsOfferedComponent } from './pages/subjects-offered/subjects-offe
     AboutUsComponent,
     ContactUsComponent,
     SubjectsOfferedComponent,
+    HomeFeatureComponent,
   ],
   imports: [
     BrowserModule,
