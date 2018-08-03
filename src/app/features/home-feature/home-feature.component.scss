@@ -12,16 +12,14 @@
 }
 .main-intro-image {
     height:260px;
-    //background: url(../../images/main-image/books.jpg) top center;
-    background-size: 1000px;
-    img { display: none;}
+    background: url(/assets/images/globe.jpg) top center;
+    background-size: cover;
 }
 
 @media screen and (min-width: 600px) {
     .main-intro-image {
         height:367px;
 //        background: url(../../images/main-image/books.jpg) top center;
-        img { display: none;}
     }
 }
 
