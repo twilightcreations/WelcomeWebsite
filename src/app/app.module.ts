@@ -14,6 +14,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { SubjectsOfferedComponent } from './pages/subjects-offered/subjects-offered.component';
 import { HomeFeatureComponent } from './features/home-feature/home-feature.component';
+import { BoxedContentCallsComponent } from './features/boxed-content-calls/boxed-content-calls.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { HomeFeatureComponent } from './features/home-feature/home-feature.compo
     ContactUsComponent,
     SubjectsOfferedComponent,
     HomeFeatureComponent,
+    BoxedContentCallsComponent,
   ],
   imports: [
     BrowserModule,

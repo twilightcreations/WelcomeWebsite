@@ -1,11 +1,9 @@
 @import "../../styles-global/_variables.scss";
 
 .mid-ribbon {
-    border: 1px solid red !important;
     //padding-top:50px;
     position: relative;
     text-align: center; 
-    border-bottom:2px solid $tertiary-color;
     margin-bottom:10px;
     .contact-details{
         margin-bottom:20px;
@@ -35,26 +33,28 @@
 
 @media screen and (min-width: 700px) {
     .mid-ribbon {
-        border-bottom:0px solid #ccc;
         margin-bottom: 0;
     }
 }
 
 
 .logo {
-    padding-top:20px;
-    padding-bottom:20px;
     width:270px; 
+    height:90px;
     margin:auto;
+    margin-top:20px;
+    background-image: url(/assets/images/logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
     img {
-        width:100%
+        width:100%;
+        display:none;
     }
 }
 
 
 @media screen and (min-width: 580px) {
     .logo {
-        border: 1px solid #ccc;
         width:300px;
     }
 }
