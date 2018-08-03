@@ -1,0 +1,104 @@
+@import "01-mixins/_mixins.scss";
+@import "01-mixins/_variables.scss";
+
+//boxed content 
+// this content is for content on the page where we want that balance
+
+.boxed-content-wrapper-home {
+    .boxes {
+        text-align: center;
+        margin-bottom:36px;
+
+        h2 {
+            border-bottom:1px dashed rgba($header-color, 0.6);
+            padding-bottom:10px;
+            margin-bottom:10px;
+        }
+
+        .box {
+            //border:1px solid #ccc;
+            padding:44px 8px 8px 8px;
+            background:white;
+            margin-bottom:20px;
+            position: relative;
+        }
+        .box:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-style: normal;
+            margin:0px 0px 0px 10px;
+            text-decoration:none;
+            position:absolute;
+            font-size: 27px;
+            left:calc(50% - 27px);
+            top:10px;
+            color: $header-color;
+        }
+        .box.box1:after {
+            content: '\f044';
+        }        
+        .box.box2:after {
+            content: '\f201';
+        }        
+        .box.box3:after {
+            content: '\f160';
+        }        
+        .box.box4:after {
+            content: '\f19d';
+        }            
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+.boxed-content-wrapper-home {
+    .boxes {
+        margin-bottom:20px;
+        display:flex; 
+            .box {
+                flex:1;
+                margin-left:20px;
+                margin-right:20px; 
+            }
+        }
+    }
+}
+//END - boxed content
+
+
+
+
+//about us page
+.boxed-content-wrapper-about-us {
+    .boxes {
+        text-align: center;
+
+        h2 {
+            border-bottom:1px solid rgba($header-color, 0.4);
+            padding-bottom:10px;
+            margin-bottom:10px;
+        }
+
+        .box {
+            //border:1px solid #ccc;
+            padding:0px 0px 0px 0px;
+            background:white;
+            margin-bottom:20px;
+            position: relative;
+        }
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+.boxed-content-wrapper-about-us {
+    .boxes {
+        display:flex; 
+            .box {
+                flex:1;
+                margin-left:20px;
+                margin-right:20px; 
+            }
+        }
+    }
+}

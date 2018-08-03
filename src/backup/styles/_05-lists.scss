@@ -1,0 +1,30 @@
+@import "01-mixins/_mixins.scss";
+@import "01-mixins/_variables.scss";
+
+ul.list-default {
+    padding:0 10px 10px 10px;
+    list-style: disc;
+    list-style-position: outside;
+    margin-bottom:20px;    
+    margin-left:20px;
+    margin-right:20px;
+
+    li{
+        padding: 0 5px 5px 5px;
+        text-align: left;
+        line-height: 1.5em;
+        margin-left:30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ul.list-default {
+        margin-left:10px;
+        margin-right:10px;
+
+        li{
+            margin-left:5px;
+        }
+    }
+
+}

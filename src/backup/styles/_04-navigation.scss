@@ -1,0 +1,180 @@
+@import "01-mixins/_mixins.scss";
+@import "01-mixins/_variables.scss";
+
+
+
+
+.toggle-menu {
+	display:inline-block;
+	position: fixed;
+	z-index:1001;
+	left:0;
+	padding:6px 8px 8px 12px;
+	margin-top:-48px;
+	color:#666;
+	font-size: 2.2rem;
+	:hover {
+		cursor:pointer;
+	}
+}
+
+.page-overlay {
+	position: absolute;
+	width:0px;
+	height:0px;
+	background-color: #fff;
+	opacity:0.6;
+	z-index:1001;
+}
+.mobile-menu-open .page-overlay {
+	width:100%;
+	height:100%;
+}
+
+
+.main-menu  {
+	position:fixed;
+	height: 100%; 
+	top:0;
+	left:-300px;
+	width:300px;
+	background: white; 
+	z-index: 1001;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	background-color: $desktop-menu-background-color;
+
+	//slide effect
+	transition-property: all;
+	transition-duration: .8s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);	
+
+	.toggle-close {
+		color:#666;
+		position: relative;
+		a {
+			padding:28px 8px 26px 50px;
+		}
+		i {
+			font-size: 30px;
+			position:absolute;
+			top:20px;
+			left:16px;
+		}
+		&:after {
+			content: '';
+		}		
+	
+	}
+
+	ul {
+		padding:0;
+		margin:0;
+	}
+	li {
+		list-style: none;
+		position: relative;
+		color:#ccc;
+	}
+	li:hover { 
+		color:$secondary-color;
+	}
+	li:after {
+        content: '\f054';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-style: normal;
+        margin:0px 0px 0px 10px;
+        text-decoration:none;
+        position:absolute;
+		font-size: 17px;
+        right:16px;
+        top:10px;
+	}
+	li.active {
+		color:$secondary-color;
+		a {
+			color:$secondary-color;
+		}
+	}
+	a { 
+		text-decoration: none;
+		font-size: 1.5rem;
+		color:#ccc;
+		display:block;
+		padding:14px 20px 10px 16px;
+		margin-bottom:2px;
+		border-bottom:1px solid #666;
+	}
+	
+	a:hover { 
+		color:$secondary-color;
+	}	
+	&.open{
+		top:0;
+		left:0; 
+	}
+}
+
+
+
+@media screen and (min-width: 700px) {
+	.main-menu  {
+			position:relative;
+			//margin-bottom:20px;
+			border:0px solid pink;
+			left:auto; 
+			width:auto; 
+			text-align: center;
+			background-color: $desktop-menu-background-color;
+			
+		li {
+			display:inline-block;
+			//width:120px;
+		}
+		li:after {
+			content:"";
+		}		
+		a { 
+			padding:16px 20px 16px 20px;
+			font-size: 1.4rem;
+			margin-left:8px;
+			margin-right:8px;
+			position:relative;
+			color:$desktop-menu-text-color;
+			transition-property: all; 
+			transition-duration: .8s;
+			transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+			border-bottom:none;
+		}
+		a:hover { 
+			color: $secondary-color; 
+		}
+
+
+		//creating the menu hover effect
+		a:after { 
+			content:"";
+			position:absolute;
+			bottom:0;
+			left:50%;
+			height:3px;
+			width:0%;
+			background-color: $secondary-color;
+			
+			transition-property: all;
+			transition-duration: .8s;
+			transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+		}
+		a:hover:after { 
+			left:0;
+			width:100%;
+		}
+		
+	}
+
+	.toggle-menu, .main-menu .toggle-close, .main-menu .desktop-only {
+		display: none;
+	}
+
+}

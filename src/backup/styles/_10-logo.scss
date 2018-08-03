@@ -1,0 +1,21 @@
+.logo {
+    padding-top:20px;
+    padding-bottom:20px;
+    width:270px; 
+    margin:auto;
+    img {
+        width:100%
+    }
+}
+
+
+@media screen and (min-width: 580px) {
+    .logo {
+        width:300px;
+    }
+}
+@media screen and (min-width: 700px) {
+    .logo {
+        width:374px;
+    }
+}    

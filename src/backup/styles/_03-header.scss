@@ -1,0 +1,84 @@
+@import "01-mixins/_mixins.scss";
+@import "01-mixins/_variables.scss";
+
+
+header {
+    //margin-bottom:20px;
+    background-color: #fff;    
+}
+.top-ribbon  {
+    background-color: $secondary-color;
+    position: fixed;
+    z-index:1000;
+    width:100%;
+    .phone {
+        padding-top:16px;
+        padding-bottom:16px;
+        padding-right: 5px;
+        float:right;
+        font-size:1.2rem;
+        span{
+            padding-left:20px;
+            position: relative;
+        }        
+        i{
+            position: absolute;
+            left:0;
+            font-size:22px;
+            top:2px;
+        }
+    }    
+}
+
+.mid-ribbon {
+    padding-top:50px;
+    position: relative;
+    text-align: center; 
+    border-bottom:2px solid $tertiary-color;
+    margin-bottom:10px;
+    .contact-details{
+        margin-bottom:20px;
+    }
+
+    address {
+        padding-top: 10px;
+        padding-bottom:13px;
+        color:darken(#F89B1C, 20);
+    }
+    
+    .email {
+        span{
+            padding-left:26px;
+            position: relative;
+            color:darken(#F89B1C, 20);
+        }        
+        i{
+            position: absolute;
+            left:0;
+            font-size:18px;
+            top:-2px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+
+    header{
+        margin-bottom: 0;
+    }
+
+    .top-ribbon  {
+        .phone {
+            padding-top:16px;
+            padding-bottom:16px;
+
+        }
+    }
+
+    .mid-ribbon {
+        border-bottom:0px solid #ccc;
+        margin-bottom: 0;
+    }
+
+}

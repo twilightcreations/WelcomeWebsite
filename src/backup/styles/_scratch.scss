@@ -1,0 +1,91 @@
+@import "01-mixins/_mixins.scss";
+@import "01-mixins/_variables.scss";
+
+.products {
+    margin-bottom:20px;
+
+    .product {
+        text-align: center; 
+        position:relative;
+        margin-bottom:20px;
+        background-color: #f1f1f1;
+        border:1px solid #ccc;
+        position: relative;
+        
+        }
+
+    .price-block {
+        //position: absolute;
+        height:60px;
+        width:100%;
+        bottom:0;
+        color:lightslategrey; 
+        font-size:30px;
+        padding:13px;
+    }
+    .content{
+        padding:10px;
+        color: #666;
+    }
+    .product.popular {
+        box-shadow: 0px 4px 16px grey;
+    }
+    .preferred-text {
+        border:1px solid #f89b1c;
+        border-radius:5px;
+        display:inline-block;
+        clear:both;
+        padding:8px;
+        clear:right;
+        background-color: lighten(#f89b1c, 20%);
+        box-shadow: 0px 2px 20px #999;
+    }        
+    h3 {
+        padding:15px 10px 20px 10px;
+        background-color: #f89b1c;
+        color: $primary-color;
+        position:relative;
+    }
+    h3:after {
+        content:"";
+        position:absolute;
+        border-top:0px solid #ccc;
+        border-right:0px solid #ccc;
+        border-bottom:0px solid #ccc;
+        border-left:0px solid #ccc; 
+        width:20px;
+        height:20px;
+        bottom:-10px;
+        left:calc(50% - 10px);
+        background-color: #f89b1c;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Safari */
+        transform: rotate(45deg);        
+    }        
+}
+
+@media screen and (min-width: 600px) {
+
+    .products {
+        max-width: 800px;
+        margin:auto; 
+        margin-bottom:30px;
+        .product {
+            margin-left:0px;
+            margin-right:0px;
+            width:32%;
+            float: left;
+            margin-top:20px;
+            min-height:220px;
+        }
+        .product.popular {
+            width:32%;
+            margin-top:0;
+            margin-left:2%;
+            margin-right:2%;
+            min-height:260px;
+        }        
+    }
+}
+
+

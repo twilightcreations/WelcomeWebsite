@@ -1,0 +1,56 @@
+@import "01-mixins/_mixins.scss";
+@import "01-mixins/_variables.scss";
+
+body{
+   font-family: 'Open Sans', sans-serif;
+   font-size: 15px;
+}
+
+p {
+    line-height:1.5em;
+    margin-bottom:20px;
+    text-align: justified;
+}
+
+h1, h2, h3, h4, h5, h5 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom:26px;
+    text-align: center; 
+    color: $header-color;
+    font-weight:300;
+    
+}
+ 
+h1 {
+    font-size:2.4rem;
+    border-bottom: 1px dashed $header-color;
+    max-width:700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:15px;
+    margin-top:15px; 
+}
+h2 {
+    font-size:2.0em;    
+}
+h3 {
+    font-size:1.8em;    
+}
+h4 {
+    font-size:1.6em;    
+}
+h5 {
+    font-size:1.5em;    
+}
+h6 {
+    font-size:1.5em;    
+} 
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+}

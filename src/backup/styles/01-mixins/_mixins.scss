@@ -1,0 +1,10 @@
+
+//enabling the content to still sit within the page canvas but not visible.
+@mixin hideFromPage() {
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    height:0;
+    width:0;
+}

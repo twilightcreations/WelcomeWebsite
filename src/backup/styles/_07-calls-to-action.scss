@@ -1,0 +1,149 @@
+@import "01-mixins/_mixins.scss";
+@import "01-mixins/_variables.scss";
+
+//main-image
+.main-intro-image-wrapper {
+    border:  3px solid $main-image-border-color; 
+     
+    margin-bottom:20px;
+}
+.main-intro-image {
+    height:260px;
+    background: url(../../images/main-image/books.jpg) top center;
+    background-size: 1000px;
+    img { display: none;}
+}
+
+@media screen and (min-width: 600px) {
+    .main-intro-image {
+        height:367px;
+        background: url(../../images/main-image/books.jpg) top center;
+        img { display: none;}
+    }
+}
+
+//homepage calls to action
+.calls-to-action-wrapper {
+    text-align: center;
+    margin-bottom:20px;
+    .call {
+        border:1px solid #ccc;
+        padding:8px 8px 55px 8px;
+        background-color:#fff;
+        margin-bottom:20px;
+        position:relative;
+        h2 {
+            padding-top: 10px;
+        }
+        .call-action {
+            padding:10px;
+            position:absolute;
+            bottom:15px;
+            background-color: $secondary-color;
+            text-decoration: none;
+            color: $primary-color;
+            width:140px;
+            left:calc(50% - 70px); //centralises it based on its width.
+            border:0px solid #ccc;   
+        
+            transition-property: all;
+            transition-duration: 1.0s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);        
+        }
+        .call-action:hover {
+            background-color: $primary-color;
+            color: #fff;
+        }    
+    }
+
+    //creating the menu hover effect
+    .call:before { 
+        content:"";
+        position:absolute;
+        top:0; 
+        left:50%;
+        height:3px;
+        width:0; 
+        background-color: $tertiary-color;
+        z-index: 1;
+
+        transition-property: all;
+        transition-duration: .8s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    }
+    .call:hover:before { 
+        left:0;
+        width:100%;
+    }    
+
+
+}
+
+@media screen and (min-width: 600px) {
+    .calls-to-action-wrapper {
+        margin-top:-80px;
+        display:flex;
+        .call {
+            flex:1;
+            margin-left:20px;
+            margin-right:20px;
+        }
+    }
+}
+//END - homepage calls to action
+
+//blocks of text on the homepage....currently
+.text-blocks {
+    margin-bottom:20px;
+
+    .text-block {
+        text-align: center; 
+        padding:15px 10px 50px 10px;
+        position:relative;
+        margin-bottom:20px;
+        background-color: #f1f1f1;
+    }
+    .call-action {
+        padding:10px;
+        position:absolute;
+        width:160px;
+        left:calc(50% - 80px); //centralises it based on its width.
+        bottom:15px;
+        background-color: $secondary-color;;
+        text-decoration: none;
+        color: $primary-color;
+    }
+    .call-action:hover {
+        background-color: $primary-color;
+        color: $secondary-color;;
+
+        transition-property: all;
+        transition-duration: 1.0s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);      
+    }
+    
+    //list within this block
+    ul.list-floating-points {
+        padding:0 20px 20px 20px;
+        
+        li{
+            padding: 6px;
+            display: inline-block;
+            margin:3px;
+            background-color: lighten(#ccc, 5%);
+        }
+    }    
+
+}
+@media screen and (min-width: 600px) {
+    .text-blocks {
+        display: flex;
+        width:calc(100% + 20px);
+        margin-left:-20px;
+        .text-block {
+            flex:1;
+            margin-left:20px;
+        }
+    }
+}
+//END --- blocks of text on the homepage....currently
