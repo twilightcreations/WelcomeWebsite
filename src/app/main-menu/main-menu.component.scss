@@ -3,18 +3,17 @@
 //  THIS NEEDS MOVING TO THE ITS OWN COMPONENT AND NEEDS TO BE OUTSITE THE PAGE STRUCTURE
 .toggle-menu {
 	display:inline-block;
-	position: fixed;
+	position: absolute;
 	z-index:1001;
 	left:0;
+	top:0;
 	padding:6px 8px 8px 12px;
-	margin-top:-48px;
-	color:#666;
+	color:#000;
 	font-size: 2.2rem;
 	:hover {
 		cursor:pointer;
 	}
 }
-
 
 @media screen and (min-width: 700px) {
     .toggle-menu, .main-menu .toggle-close, .main-menu .desktop-only {
@@ -41,22 +40,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .main-menu  {
 	position:fixed;
 	height: 100%; 
 	top:0;
-	left:-280px;
+	left:-300px;
 	width:300px;
 	background: white; 
 	z-index: 1001;
@@ -69,10 +57,11 @@
 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);	
 
 	.toggle-close {
-		color:#666;
+		color:#fff;
 		position: relative;
 		a {
-			padding:28px 8px 26px 50px;
+			color:#fff;
+			padding:16px 8px 14px 50px;
 		}
 		i {
 			font-size: 30px;

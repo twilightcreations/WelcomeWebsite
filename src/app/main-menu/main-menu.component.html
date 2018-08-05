@@ -1,8 +1,8 @@
-<div class="toggle-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+<div class="toggle-menu"  (click)="mnuStatus=!mnuStatus"><i class="fa fa-bars" aria-hidden="true" ></i></div>
 
-<nav class="main-menu">
+<nav class="main-menu" [ngClass]="mnuStatus ? 'open' : ''">
   <ul>
-    <li class="toggle-close">
+    <li class="toggle-close" (click)="mnuStatus=!mnuStatus">
       <a href="#">
         <i class="fa fa-times" aria-hidden="true"></i>Close</a>
     </li>
