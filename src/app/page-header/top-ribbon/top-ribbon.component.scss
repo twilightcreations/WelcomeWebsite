@@ -2,6 +2,7 @@
 
 .top-ribbon  {
     background-color: $secondary-color;
+    font-family: 'Cardo', serif;
     //position: fixed;
     z-index:1000;
     width:100%;
@@ -11,7 +12,7 @@
         padding-bottom:16px;
         padding-right: 5px;
         float:right;
-        font-size:1.2rem;
+        font-size:1.3rem;
         span{
             padding-left:20px;
             position: relative;
@@ -63,7 +64,8 @@
         padding:8px 8px 8px 8px;
         text-decoration: none;
         display:block;
-        font-size:1.1rem;
+        font-size:1.2rem;
+        font-weight: 400;
         margin-left:8px;
         margin-right:8px;
         position:relative; 

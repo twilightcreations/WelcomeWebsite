@@ -9,7 +9,7 @@
 	top:0;
 	padding:6px 8px 8px 12px;
 	color:#000;
-	font-size: 2.2rem;
+	font-size: 2.0rem;
 	:hover {
 		cursor:pointer;
 	}
@@ -46,6 +46,7 @@
 
 @media screen and (min-width: 0) and (max-width: 699px) {
 .main-menu  {
+	font-family: 'Cardo', serif;
 	position:fixed;
 	height: 100%; 
 	top:0;
@@ -53,7 +54,7 @@
 	width:300px;
 	background: white; 
 	z-index: 1010;
-	font-weight: 300;
+	font-weight: 400;
 	background-color: $desktop-menu-background-color;
 
 	//slide effect
@@ -112,10 +113,10 @@
 	}
 	a { 
 		text-decoration: none;
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 		color:#ccc;
 		display:block;
-		padding:14px 20px 10px 16px;
+		padding:4px 20px 4px 16px;
 		margin-bottom:2px;
 		border-bottom:1px solid #666;
 	}
@@ -134,6 +135,7 @@
 
 @media screen and (min-width: 700px) {
 	.main-menu  {
+		font-family: 'Cardo', serif;
         position:relative;
 		left:auto; 
 		text-align: center;
@@ -159,6 +161,10 @@
 			transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 			border-bottom:none;
 			text-decoration: none;
+			border-left: 1px solid darken(#ccc, 50);
+		}
+		li:nth-child(4) a { 
+			border-left: 0 solid red; 
 		}
 		a:hover { 
 			color: $secondary-color; 
