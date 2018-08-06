@@ -3,7 +3,7 @@
 //  THIS NEEDS MOVING TO THE ITS OWN COMPONENT AND NEEDS TO BE OUTSITE THE PAGE STRUCTURE
 .toggle-menu {
 	display:inline-block;
-	position: absolute;
+	position: fixed;
 	z-index:1001;
 	left:0;
 	top:0;
@@ -140,7 +140,9 @@
 		left:auto; 
 		text-align: center;
 		background-color: $desktop-menu-background-color;		
-
+		ul {
+			margin: 0; 
+		}
 		li {
 			display:inline-block;
 			//width:120px;
@@ -164,6 +166,9 @@
 			border-left: 1px solid darken(#ccc, 50);
 		}
 		li:nth-child(4) a { 
+			border-left: 0 solid red; 
+		}
+		li:nth-child(8) a { 
 			border-left: 0 solid red; 
 		}
 		a:hover { 

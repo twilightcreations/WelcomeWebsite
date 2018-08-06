@@ -20,6 +20,7 @@ const routes: Routes = [];
     { path: 'subjects-offered', component: SubjectsOfferedComponent },
     { path: 'testimonials', component: TestimonialsComponent },
     { path: 'contact-us', component: ContactUsComponent },
+    { path: '**', component: HomeComponent },
   ])],
   exports: [RouterModule]
 })

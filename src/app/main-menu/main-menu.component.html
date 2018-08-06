@@ -2,9 +2,9 @@
 
 <div class="toggle-menu"  (click)="mnuStatus=!mnuStatus"><i class="fa fa-bars" aria-hidden="true" ></i></div>
 
-<nav class="main-menu" [ngClass]="mnuStatus ? 'open' : ''">
+<nav class="main-menu" [ngClass]="mnuStatus ? 'open' : ''" (click)="mnuStatus=!mnuStatus">
   <ul>
-    <li class="toggle-close" (click)="mnuStatus=!mnuStatus">
+    <li class="toggle-close" >
       <a href="#">
         <i class="fa fa-times" aria-hidden="true"></i>Close</a>
     </li>
@@ -21,7 +21,7 @@
 
 
     <li>
-      <a href="11-plus-mock-days.php ">11 + Mock Days</a>
+      <a  href="11-plus-mock-days.php ">11 + Mock Days</a>
     </li>
     <li>
       <a href="11-plus.php ">11 +</a>
