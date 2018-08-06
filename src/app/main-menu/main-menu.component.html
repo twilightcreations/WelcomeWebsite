@@ -1,3 +1,5 @@
+<div class="page-overlay" [ngClass]="mnuStatus ? 'mobile-menu-open' : ''" (click)="mnuStatus=!mnuStatus" ></div>
+
 <div class="toggle-menu"  (click)="mnuStatus=!mnuStatus"><i class="fa fa-bars" aria-hidden="true" ></i></div>
 
 <nav class="main-menu" [ngClass]="mnuStatus ? 'open' : ''">
