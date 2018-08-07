@@ -1,0 +1,82 @@
+    .testimonial {
+        border: 1px solid #ccc;
+        padding: 16px 50px 8px 50px;
+        background: #eef1f6;
+        margin: 10px 10px 90px 10px;
+        position: relative;
+        height: calc(100% - 100px);
+        h2 {
+            display: none;
+        }
+        .name {
+            font-weight: bold;
+            position: absolute;
+            bottom: -40px;
+            right: 5px;
+        }
+        .location {
+            position: absolute;
+            bottom: -60px;
+            right: 5px;
+        }
+        .icons::before {
+            top: 10px;
+            left: 17px;
+            content: '\f10d';
+            font-family: FontAwesome;
+            position: absolute;
+            font-size: 20px;
+            color: #999;
+            
+        }
+        .icons::after {
+            bottom: 13px;
+            right: 17px;
+            content: '\f10e';
+            font-family: FontAwesome;
+            position: absolute;
+            font-size: 20px;
+            color: #999;
+        }
+    }
+
+    .testimonial {
+        // i {
+        //     position: absolute;
+        //     width: 24px;
+        //     height: 24px;
+        //     opacity: 0.8;
+        // }
+        // i.start {
+        //     background: url(/images/quote-start.png) top left no-repeat;
+        //     background-size: 100%;
+        //     top: 10px;
+        //     left: 10px;
+        // }
+        // i.end {
+        //     background: url(/images/quote-end.png) bottom right no-repeat;
+        //     background-size: 100%;
+
+
+    
+        // }
+    }
+
+    .testimonial:after {
+        content: "";
+        position: absolute;
+        border-top: 0px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-left: 0px solid #ccc;
+        width: 20px;
+        height: 20px;
+        bottom: -12px;
+        right: 40px;
+        background: #eef1f6;
+        -ms-transform: rotate(45deg);
+        /* IE 9 */
+        -webkit-transform: rotate(45deg);
+        /* Safari */
+        transform: rotate(45deg);
+    }

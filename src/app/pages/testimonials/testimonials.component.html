@@ -3,70 +3,22 @@
 
     <h1>Testimonials's</h1>
     <div class="testimonials-wrapper">
-        <div class="testimonials">
-            <div class="testimonial">
-                <i class="start" aria-hidden="true"></i>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, quibusdam?</p>
-                <div class="name">Lorem, ipsum dolor</div>
-                <div class="location">leeds, UK</div>
-                <i class="end" aria-hidden="true"></i>
-            </div>
-            <div class="testimonial">
-                <i class="start" aria-hidden="true"></i>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, quibusdam?</p>
-                <div class="name">Lorem, ipsum dolor</div>
-                <div class="location">leeds, UK</div>
-                <i class="end" aria-hidden="true"></i>
-            </div>
-            <div class="testimonial">
-                <i class="start" aria-hidden="true"></i>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, quibusdam?</p>
-                <div class="name">Lorem, ipsum dolor</div>
-                <div class="location">leeds, UK</div>
-                <i class="end" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="testimonials">
-            <div class="testimonial">
-                <i class="start" aria-hidden="true"></i>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, quibusdam?</p>
-                <div class="name">Lorem, ipsum dolor</div>
-                <div class="location">leeds, UK</div>
-                <i class="end" aria-hidden="true"></i>
-            </div>
-            <div class="testimonial">
-                <i class="start" aria-hidden="true"></i>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, quibusdam?</p>
-                <div class="name">Lorem, ipsum dolor</div>
-                <div class="location">leeds, UK</div>
-                <i class="end" aria-hidden="true"></i>
-            </div>
-            <div class="testimonial">
-                <i class="start" aria-hidden="true"></i>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, quibusdam?</p>
-                <div class="name">Lorem, ipsum dolor</div>
-                <div class="location">leeds, UK</div>
-                <i class="end" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="testimonials">
-            <div class="testimonial">
-                <i class="start" aria-hidden="true"></i>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, quibusdam?</p>
-                <div class="name">Lorem, ipsum dolor</div>
-                <div class="location">leeds, UK</div>
-                <i class="end" aria-hidden="true"></i>
-            </div>
-            <div class="testimonial">
-                <i class="start" aria-hidden="true"></i>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, quibusdam?</p>
-                <div class="name">Lorem, ipsum dolor</div>
-                <div class="location">leeds, UK</div>
-                <i class="end" aria-hidden="true"></i>
-            </div>
 
-        </div>
+        <div 
+        *ngFor="let tes of testimonialsFeed" 
+        app-testimonial class="item-wrapper" 
+        [description]=tes.description 
+        [name]=tes.name
+        [town]=tes.town
+        [country]=tes.country
+        ></div>
+        <!-- <div app-testimonial class="item-wrapper"></div>
+        <div app-testimonial class="item-wrapper"></div>
+        <div app-testimonial class="item-wrapper"></div>
+        <div app-testimonial class="item-wrapper"></div>
+        <div app-testimonial class="item-wrapper"></div> -->
     </div>
-
-    </div>  
+    
+</div>  
 </div>
+
