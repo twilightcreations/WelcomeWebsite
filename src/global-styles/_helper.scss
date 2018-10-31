@@ -1,0 +1,54 @@
+//Helper (aka utility) rules are small in scope and independent of modules. Examples: .h-uppercase, .h-nowrap, .h-muted 
+
+.h-absolute-center {
+	@include absolute-center;
+}
+
+.h-vertical-align-center {
+	@include vertical-align-center;
+}
+
+.h-text-light {
+
+	h1, h2, h3, h4, h5, h6, p, ul, ol, dl, span, div, input, blockquote, button {
+		color: white !important;
+	}
+}
+
+.h-text-center {
+	text-align: center;
+}
+
+.h-text-right {
+	text-align: right;
+}
+
+.h-uppercase {
+    text-transform: uppercase;
+}
+
+.h-bg-img--pattern {
+	background-position: center center;
+	background-repeat: repeat;
+}
+
+.h-bg-img--cover {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.h-bg-img--contain {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.h-sr-only {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}

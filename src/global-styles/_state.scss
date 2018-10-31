@@ -1,0 +1,69 @@
+//State rules describe how modules or layouts look in a particular state. Typically applied or removed with JavaScript. For example, hidden, expanded, active, etc.
+
+//HIDE ELEMENTS
+
+.is-hidden {
+	display: none !important;
+}
+
+@media (min-width: 1200px) {
+
+  .is-hidden--lg {
+    display: none !important;
+  }
+}
+
+@include bp(lg) {
+
+	.is-hidden--md {
+		display: none !important;
+	}
+}
+
+@include bp(md) {
+
+	.is-hidden--sm {
+		display: none !important;
+	}
+}
+
+@include bp(sm) {
+
+	.is-hidden--xs {
+		display: none !important;
+	}
+}
+
+//SHOW ELEMENTS
+
+.is-visible--xs, .is-visible--sm, .is-visible--md, .is-visible--lg {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+
+    .is-visible--lg {
+		display: block !important;
+	}
+}
+
+@include bp(lg) {
+
+    .is-visible--md {
+		display: block !important;
+	}
+}
+
+@include bp(md) {
+
+    .is-visible--sm {
+		display: block !important;
+	}
+}
+
+@include bp(sm) {
+
+    .is-visible--xs {
+		display: block !important;
+	}
+}

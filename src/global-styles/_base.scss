@@ -1,0 +1,13 @@
+//Base rules are default styles for HTML elements like links, paragraphs, and headlines.
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+input, button, a {
+	-webkit-tap-highlight-color: transparent;
+}

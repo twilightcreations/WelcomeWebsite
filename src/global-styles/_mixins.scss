@@ -1,0 +1,162 @@
+@mixin background-opacity($color, $opacity: 0.8) {
+	background: $color;
+	background: rgba($color, $opacity);
+}
+
+@mixin bpmin($min) {
+	
+	@media only screen and (min-width: $min) {
+		@content;
+	}
+}
+
+@mixin bpmax($max) {
+	
+	@media only screen and (max-width: $max - 1) {
+		@content;
+	}
+}
+
+@mixin bpmm($min, $max) {
+
+	@media only screen and (min-width: $min) and (max-width: $max - 1) {
+		@content;
+	}
+}
+
+@mixin bp($point) {
+
+	@if $point == xlplus {
+	  
+    @media only screen and (min-width: $xl) {
+		@content;
+		}
+	}
+	
+	@else if $point == xl {
+	  
+    @media only screen and (min-width: $lg) and (max-width: $xl - 1) {
+		@content;
+		}
+	}
+
+	   @else if $point == lgplus {
+	  
+    @media only screen and (min-width: $lg) {
+		@content;
+		}
+	}
+  
+   @else if $point == lg {
+	  
+    @media only screen and (min-width: $md) and (max-width: $lg - 1) {
+		@content;
+		}
+	}
+	
+	@else if $point == lgneg {
+	  
+    @media only screen and (max-width: $lg - 1) {
+		@content;
+		}
+	}
+
+	@else if $point == mdplus {
+	  
+    @media only screen and (min-width: $md) {
+		@content;
+		}
+	}
+	
+	@else if $point == md {
+	  
+    @media only screen and (min-width: $sm) and (max-width: $md - 1) {
+		@content;
+		}
+	}
+
+	@else if $point == mdneg {
+	  
+    @media only screen and (max-width: $md - 1) {
+		@content;
+		}
+	}
+
+	@else if $point == smplus {
+	  
+    @media only screen and (min-width: $sm) {
+		@content;
+		}
+	}
+	
+	@else if $point == sm {
+	  
+    @media only screen and (max-width: $sm - 1) {
+		@content;
+		}
+	}
+	
+	@else if $point == xs {
+	  
+    @media only screen and (max-width: $xs - 1) {
+		@content;
+		}
+	}
+	
+	@else if $point == xxs {
+	  
+    @media only screen and (max-width: $xxs - 1) {
+		@content;
+		}
+	}
+}
+
+@mixin vertical-align-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transform: translatey(-50%);
+}
+
+@mixin text-shadow {
+	text-shadow: 0 0 8px black;
+}
+
+@mixin text-el {
+
+	h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, dd, dt, blockquote, div, span, figure, button, input, textarea  {
+		@content;
+	}
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content;}
+  &:-moz-placeholder           {@content;}
+  &::-moz-placeholder          {@content;}
+  &:-ms-input-placeholder      {@content;}  
+}
+
+@mixin clearfix {
+
+	&:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+	}
+}
+
+//MOBILE MENU BUTTON LINE
+@mixin line {
+    display: inline-block;
+    width: $button-size;
+    height: 2px;
+    transition: 0.3s;
+}

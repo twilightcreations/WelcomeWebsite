@@ -1,3 +1,16 @@
+@import "global-styles/_base.scss";
+
+@import 'global-styles/fonts';
+@import 'global-styles/variables';
+@import 'global-styles/mixins';
+@import 'global-styles/normalize';
+@import 'global-styles/helper';
+@import 'global-styles/base';
+@import 'global-styles/layout';
+@import 'global-styles/module';
+@import 'global-styles/state';
+@import 'global-styles/ie';
+
 /* You can add global styles to this file, and also import other style files */
 
 //fonts available
